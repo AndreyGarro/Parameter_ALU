@@ -1,0 +1,11 @@
+module fulladder 
+	#(parameter N = 8) 
+		(input wire [n-1:0] a, b, 
+		 input wire cin, 
+		 output wire [n-1:0] c, 
+		 output wire cout);
+
+	assign s = a + b;
+	assign cout = a ^ b ^ cin; 			
+													
+endmodule

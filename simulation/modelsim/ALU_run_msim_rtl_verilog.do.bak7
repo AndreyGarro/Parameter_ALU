@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/multiplexer.sv}
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/fulladder.sv}
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/and_gate.sv}
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/or_gate.sv}
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/xor_gate.sv}
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/not_gate.sv}
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/param_alu.sv}
+vlog -sv -work work +incdir+C:/Users/user/Documents/ALU {C:/Users/user/Documents/ALU/logic_right_shifter.sv}
+

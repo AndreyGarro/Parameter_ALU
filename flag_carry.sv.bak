@@ -1,0 +1,6 @@
+module flag_carry #(parameter = n) (input logic cout, input logic [3:0] op,
+												output logic _carry)
+
+	
+
+endmodule

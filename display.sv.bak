@@ -1,0 +1,44 @@
+module display #parameter(n=8) (input logic c[n-1], enable, output logic display[55]);
+
+
+	hex7seg disp1(
+				.display(disp[7+:0]),
+				.inputHex(c),
+				.enable(1));
+	if (n>4)
+		hex7seg disp2(
+					.display(disp[7+:7]),
+					.inputHex(c[n-1:4]),
+					.enable(1));
+	if (n>8)
+		hex7seg disp3(
+					.display(disp[7+:14]),
+					.inputHex(c[n-1:8]),
+					.enable(1));
+	if (n>12)
+		hex7seg disp4(
+					.display(disp[7+:21]),
+					.inputHex(c[n-1:12]),
+					.enable(1));
+	if (n>16)
+		hex7seg disp5(
+					.display(disp[7+:28]),
+					.inputHex(c[n-1:16]),
+					.enable(1));
+	if (n>20)
+		hex7seg disp6(
+					.display(disp[7+:35]),
+					.inputHex(c[n-1:20]),
+					.enable(1));
+	if (n>24)	
+		hex7seg disp7(
+					.display(disp[7+:42]),
+					.inputHex(c[n-1:24]),
+					.enable(1));
+	if (n>28)
+		hex7seg disp8(
+					.display(disp[7+:49]),
+					.inputHex(c[n-1:28]),
+					.enable(1));
+
+endmodule

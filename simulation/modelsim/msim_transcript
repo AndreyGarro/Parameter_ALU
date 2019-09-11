@@ -1,0 +1,306 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/multiplexer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:10 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/multiplexer.sv 
+# -- Compiling module multiplexer
+# 
+# Top level modules:
+# 	multiplexer
+# End time: 22:10:10 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/fulladder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:10 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/fulladder.sv 
+# -- Compiling module fulladder
+# 
+# Top level modules:
+# 	fulladder
+# End time: 22:10:10 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/and_gate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:10 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/and_gate.sv 
+# -- Compiling module and_gate
+# 
+# Top level modules:
+# 	and_gate
+# End time: 22:10:10 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/or_gate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:10 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/or_gate.sv 
+# -- Compiling module or_gate
+# 
+# Top level modules:
+# 	or_gate
+# End time: 22:10:10 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/xor_gate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:10 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/xor_gate.sv 
+# -- Compiling module xor_gate
+# 
+# Top level modules:
+# 	xor_gate
+# End time: 22:10:10 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/not_gate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/not_gate.sv 
+# -- Compiling module not_gate
+# 
+# Top level modules:
+# 	not_gate
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/param_alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/param_alu.sv 
+# -- Compiling module param_alu
+# 
+# Top level modules:
+# 	param_alu
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/test.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/test.sv 
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/logic_right_shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/logic_right_shifter.sv 
+# -- Compiling module logic_right_shifter
+# 
+# Top level modules:
+# 	logic_right_shifter
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/logic_left_shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/logic_left_shifter.sv 
+# -- Compiling module logic_left_shifter
+# 
+# Top level modules:
+# 	logic_left_shifter
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/aritmetic_right_shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/aritmetic_right_shifter.sv 
+# -- Compiling module aritmetic_right_shifter
+# 
+# Top level modules:
+# 	aritmetic_right_shifter
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/aritmetic_left_shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/aritmetic_left_shifter.sv 
+# -- Compiling module aritmetic_left_shifter
+# 
+# Top level modules:
+# 	aritmetic_left_shifter
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/circular_shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/circular_shifter.sv 
+# -- Compiling module circular_shifter
+# 
+# Top level modules:
+# 	circular_shifter
+# End time: 22:10:11 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/multiplexer_4_to_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:11 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/multiplexer_4_to_1.sv 
+# -- Compiling module multiplexer_4_to_1
+# 
+# Top level modules:
+# 	multiplexer_4_to_1
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv 
+# -- Compiling module multiplexer_16_to_1
+# 
+# Top level modules:
+# 	multiplexer_16_to_1
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/flag_negative.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/flag_negative.sv 
+# -- Compiling module flag_negative
+# 
+# Top level modules:
+# 	flag_negative
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/flag_zero.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/flag_zero.sv 
+# -- Compiling module flag_zero
+# 
+# Top level modules:
+# 	flag_zero
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/flag_carry.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/flag_carry.sv 
+# -- Compiling module flag_carry
+# 
+# Top level modules:
+# 	flag_carry
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/flag_overflow.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/flag_overflow.sv 
+# -- Compiling module flag_overflow
+# 
+# Top level modules:
+# 	flag_overflow
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/deco_7.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/deco_7.sv 
+# -- Compiling module deco_7
+# 
+# Top level modules:
+# 	deco_7
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/hex7seg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/hex7seg.sv 
+# -- Compiling module hex7seg
+# 
+# Top level modules:
+# 	hex7seg
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/diego/Desktop/ALU {C:/Users/diego/Desktop/ALU/display.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:10:12 on Sep 09,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/diego/Desktop/ALU" C:/Users/diego/Desktop/ALU/display.sv 
+# -- Compiling module display
+# 
+# Top level modules:
+# 	display
+# End time: 22:10:12 on Sep 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+run 1500
+# No Design Loaded!
+vsim work.test
+# vsim work.test 
+# Start time: 22:10:30 on Sep 09,2019
+# Loading sv_std.std
+# Loading work.test
+# Loading work.param_alu
+# Loading work.not_gate
+# Loading work.multiplexer
+# Loading work.fulladder
+# Loading work.and_gate
+# Loading work.or_gate
+# Loading work.xor_gate
+# Loading work.logic_right_shifter
+# Loading work.logic_left_shifter
+# Loading work.aritmetic_right_shifter
+# Loading work.aritmetic_left_shifter
+# Loading work.circular_shifter
+# Loading work.multiplexer_16_to_1
+# Loading work.multiplexer_4_to_1
+# Loading work.flag_zero
+# Loading work.flag_negative
+# Loading work.flag_carry
+# Loading work.flag_overflow
+# Loading work.display
+# Loading work.hex7seg
+# Loading work.deco_7
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/test.sv(8): [PCDPC] - Port size (4) does not match connection size (8) for port 's'. The port definition is at: C:/Users/diego/Desktop/ALU/param_alu.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT File: C:/Users/diego/Desktop/ALU/param_alu.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(30): [PCDPC] - Port size (8) does not match connection size (32) for port 'd6'. The port definition is at: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/op_selector File: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(30): [PCDPC] - Port size (8) does not match connection size (32) for port 'd7'. The port definition is at: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/op_selector File: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(30): [PCDPC] - Port size (8) does not match connection size (32) for port 'd12'. The port definition is at: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/op_selector File: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(30): [PCDPC] - Port size (8) does not match connection size (32) for port 'd13'. The port definition is at: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/op_selector File: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(30): [PCDPC] - Port size (8) does not match connection size (32) for port 'd14'. The port definition is at: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/op_selector File: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(30): [PCDPC] - Port size (8) does not match connection size (32) for port 'd15'. The port definition is at: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/op_selector File: C:/Users/diego/Desktop/ALU/multiplexer_16_to_1.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(37): [PCDPC] - Port size (1) does not match connection size (4) for port 'op'. The port definition is at: C:/Users/diego/Desktop/ALU/flag_negative.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/negative_conditions File: C:/Users/diego/Desktop/ALU/flag_negative.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(39): [PCDPC] - Port size (1) does not match connection size (8) for port 'a'. The port definition is at: C:/Users/diego/Desktop/ALU/flag_overflow.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/overflow_conditions File: C:/Users/diego/Desktop/ALU/flag_overflow.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/param_alu.sv(39): [PCDPC] - Port size (1) does not match connection size (8) for port 'b'. The port definition is at: C:/Users/diego/Desktop/ALU/flag_overflow.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/overflow_conditions File: C:/Users/diego/Desktop/ALU/flag_overflow.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/display.sv(7): [PCDPC] - Port size (4) does not match connection size (24) for port 'inputHex'. The port definition is at: C:/Users/diego/Desktop/ALU/hex7seg.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/display_mod/disp1 File: C:/Users/diego/Desktop/ALU/hex7seg.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/display.sv(7): [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/diego/Desktop/ALU/hex7seg.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/display_mod/disp1 File: C:/Users/diego/Desktop/ALU/hex7seg.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/display.sv(11): [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/diego/Desktop/ALU/hex7seg.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/display_mod/disp2 File: C:/Users/diego/Desktop/ALU/hex7seg.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/display.sv(15): [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/diego/Desktop/ALU/hex7seg.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/display_mod/disp3 File: C:/Users/diego/Desktop/ALU/hex7seg.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/display.sv(19): [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/diego/Desktop/ALU/hex7seg.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/display_mod/disp4 File: C:/Users/diego/Desktop/ALU/hex7seg.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/display.sv(23): [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/diego/Desktop/ALU/hex7seg.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/display_mod/disp5 File: C:/Users/diego/Desktop/ALU/hex7seg.sv
+# ** Warning: (vsim-3015) C:/Users/diego/Desktop/ALU/display.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/diego/Desktop/ALU/hex7seg.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /test/DUT/display_mod/disp6 File: C:/Users/diego/Desktop/ALU/hex7seg.sv
+add wave -position end  sim:/test/_carry
+add wave -position end  sim:/test/a
+add wave -position end  sim:/test/b
+add wave -position end  sim:/test/c
+add wave -position end  sim:/test/negative
+add wave -position end  sim:/test/overflow
+add wave -position end  sim:/test/s
+add wave -position end  sim:/test/zero
+run 1500
+# End time: 22:12:30 on Sep 09,2019, Elapsed time: 0:02:00
+# Errors: 0, Warnings: 17

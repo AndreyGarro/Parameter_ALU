@@ -1,0 +1,23 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/multiplexer.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/fulladder.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/and_gate.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/or_gate.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/xor_gate.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/not_gate.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/param_alu.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/test.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/logic_right_shifter.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/logic_left_shifter.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/aritmetic_right_shifter.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/aritmetic_left_shifter.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/circular_shifter.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/multiplexer_4_to_1.sv}
+vlog -sv -work work +incdir+C:/Users/este0/Desktop/Esteban/TEC/2019\ -\ II\ Semestre/Taller\ de\ Diseno\ Digital/ALU {C:/Users/este0/Desktop/Esteban/TEC/2019 - II Semestre/Taller de Diseno Digital/ALU/multiplexer_16_to_1.sv}
+

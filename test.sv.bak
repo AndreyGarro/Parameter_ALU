@@ -1,0 +1,18 @@
+module test();
+
+	int n = 8;
+	logic [n-1:0] a, b; 
+	logic [3:0] s; 
+	logic cin;
+	logic [n-1:8] c);
+
+	ALU DUT(a,b,s,cin,c);
+
+	initial begin
+	
+		#10 A = 4'b0101; B = 4'b1010; C = 0;
+		#10 A = 4'b0100; B = 4'b1101; C = 0;
+		
+	end
+	
+endmodule

@@ -1,0 +1,677 @@
+|param_alu
+a[0] => a[0].IN10
+a[1] => a[1].IN10
+a[2] => a[2].IN10
+b[0] => b[0].IN10
+b[1] => b[1].IN10
+b[2] => b[2].IN10
+s[0] => s[0].IN6
+s[1] => s[1].IN4
+s[2] => s[2].IN4
+s[3] => s[3].IN4
+disp[0] <= hex7seg:disp1.display
+disp[1] <= hex7seg:disp1.display
+disp[2] <= hex7seg:disp1.display
+disp[3] <= hex7seg:disp1.display
+disp[4] <= hex7seg:disp1.display
+disp[5] <= hex7seg:disp1.display
+disp[6] <= hex7seg:disp1.display
+zero <= flag_zero:zero_conditions.port1
+negative <= flag_negative:negative_conditions.port2
+_carry <= flag_carry:carry_conditions.port2
+overflow <= flag_overflow:overflow_conditions.port4
+
+
+|param_alu|not_gate:not_op
+a[0] => c[0].DATAIN
+a[1] => c[1].DATAIN
+a[2] => c[2].DATAIN
+c[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer:b_multiplexer
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|fulladder:adder
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+b[0] => _.DATAC
+b[1] => _.DATAC
+b[2] => _.DATAC
+cin => _.DATAB
+c[0] <= _.SUM_OUT
+c[1] <= _.SUM_OUT
+c[2] <= _.SUM_OUT
+cout <= _.SUM_OUT
+
+
+|param_alu|and_gate:and_op
+a[0] => c.IN0
+a[1] => c.IN0
+a[2] => c.IN0
+b[0] => c.IN1
+b[1] => c.IN1
+b[2] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|or_gate:or_op
+a[0] => c.IN0
+a[1] => c.IN0
+a[2] => c.IN0
+b[0] => c.IN1
+b[1] => c.IN1
+b[2] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|xor_gate:xor_op
+a[0] => c.IN0
+a[1] => c.IN0
+a[2] => c.IN0
+b[0] => c.IN1
+b[1] => c.IN1
+b[2] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|logic_right_shifter:logic_right_shift_op
+a[0] => ShiftRight0.IN3
+a[1] => ShiftRight0.IN2
+a[2] => ShiftRight0.IN1
+b[0] => ShiftRight0.IN6
+b[1] => ShiftRight0.IN5
+b[2] => ShiftRight0.IN4
+s[0] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|logic_left_shifter:logic_left_shift_op
+a[0] => ShiftLeft0.IN3
+a[1] => ShiftLeft0.IN2
+a[2] => ShiftLeft0.IN1
+b[0] => ShiftLeft0.IN6
+b[1] => ShiftLeft0.IN5
+b[2] => ShiftLeft0.IN4
+s[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|aritmetic_right_shifter:aritmetic_right_shift_op
+a[0] => ShiftRight0.IN3
+a[1] => ShiftRight0.IN2
+a[2] => ShiftRight0.IN0
+a[2] => ShiftRight0.IN1
+b[0] => ShiftRight0.IN6
+b[1] => ShiftRight0.IN5
+b[2] => ShiftRight0.IN4
+s[0] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|aritmetic_left_shifter:aritmetic_left_shift_op
+a[0] => ShiftLeft0.IN3
+a[1] => ShiftLeft0.IN2
+a[2] => ShiftLeft0.IN1
+b[0] => ShiftLeft0.IN6
+b[1] => ShiftLeft0.IN5
+b[2] => ShiftLeft0.IN4
+s[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|circular_shifter:circular_shift_op
+a[0] => s[2].DATAIN
+a[1] => s[0].DATAIN
+a[2] => s[1].DATAIN
+s[0] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector
+d0[0] => d0[0].IN1
+d0[1] => d0[1].IN1
+d0[2] => d0[2].IN1
+d1[0] => d1[0].IN1
+d1[1] => d1[1].IN1
+d1[2] => d1[2].IN1
+d2[0] => d2[0].IN1
+d2[1] => d2[1].IN1
+d2[2] => d2[2].IN1
+d3[0] => d3[0].IN1
+d3[1] => d3[1].IN1
+d3[2] => d3[2].IN1
+d4[0] => d4[0].IN1
+d4[1] => d4[1].IN1
+d4[2] => d4[2].IN1
+d5[0] => d5[0].IN1
+d5[1] => d5[1].IN1
+d5[2] => d5[2].IN1
+d6[0] => d6[0].IN1
+d6[1] => d6[1].IN1
+d6[2] => d6[2].IN1
+d7[0] => d7[0].IN1
+d7[1] => d7[1].IN1
+d7[2] => d7[2].IN1
+d8[0] => d8[0].IN1
+d8[1] => d8[1].IN1
+d8[2] => d8[2].IN1
+d9[0] => d9[0].IN1
+d9[1] => d9[1].IN1
+d9[2] => d9[2].IN1
+d10[0] => d10[0].IN1
+d10[1] => d10[1].IN1
+d10[2] => d10[2].IN1
+d11[0] => d11[0].IN1
+d11[1] => d11[1].IN1
+d11[2] => d11[2].IN1
+d12[0] => d12[0].IN1
+d12[1] => d12[1].IN1
+d12[2] => d12[2].IN1
+d13[0] => d13[0].IN1
+d13[1] => d13[1].IN1
+d13[2] => d13[2].IN1
+d14[0] => d14[0].IN1
+d14[1] => d14[1].IN1
+d14[2] => d14[2].IN1
+d15[0] => d15[0].IN1
+d15[1] => d15[1].IN1
+d15[2] => d15[2].IN1
+s[0] => s[0].IN4
+s[1] => s[1].IN4
+s[2] => s[2].IN1
+s[3] => s[3].IN1
+y[0] <= multiplexer_4_to_1:multiplexer_4_to_1_result.port5
+y[1] <= multiplexer_4_to_1:multiplexer_4_to_1_result.port5
+y[2] <= multiplexer_4_to_1:multiplexer_4_to_1_result.port5
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_1
+d0[0] => d0[0].IN1
+d0[1] => d0[1].IN1
+d0[2] => d0[2].IN1
+d1[0] => d1[0].IN1
+d1[1] => d1[1].IN1
+d1[2] => d1[2].IN1
+d2[0] => d2[0].IN1
+d2[1] => d2[1].IN1
+d2[2] => d2[2].IN1
+d3[0] => d3[0].IN1
+d3[1] => d3[1].IN1
+d3[2] => d3[2].IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+y[0] <= multiplexer:multiplexer_2_to_1_result.port3
+y[1] <= multiplexer:multiplexer_2_to_1_result.port3
+y[2] <= multiplexer:multiplexer_2_to_1_result.port3
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_1|multiplexer:multiplexer_2_to_1_1
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_1|multiplexer:multiplexer_2_to_1_2
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_1|multiplexer:multiplexer_2_to_1_result
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_2
+d0[0] => d0[0].IN1
+d0[1] => d0[1].IN1
+d0[2] => d0[2].IN1
+d1[0] => d1[0].IN1
+d1[1] => d1[1].IN1
+d1[2] => d1[2].IN1
+d2[0] => d2[0].IN1
+d2[1] => d2[1].IN1
+d2[2] => d2[2].IN1
+d3[0] => d3[0].IN1
+d3[1] => d3[1].IN1
+d3[2] => d3[2].IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+y[0] <= multiplexer:multiplexer_2_to_1_result.port3
+y[1] <= multiplexer:multiplexer_2_to_1_result.port3
+y[2] <= multiplexer:multiplexer_2_to_1_result.port3
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_2|multiplexer:multiplexer_2_to_1_1
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_2|multiplexer:multiplexer_2_to_1_2
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_2|multiplexer:multiplexer_2_to_1_result
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_3
+d0[0] => d0[0].IN1
+d0[1] => d0[1].IN1
+d0[2] => d0[2].IN1
+d1[0] => d1[0].IN1
+d1[1] => d1[1].IN1
+d1[2] => d1[2].IN1
+d2[0] => d2[0].IN1
+d2[1] => d2[1].IN1
+d2[2] => d2[2].IN1
+d3[0] => d3[0].IN1
+d3[1] => d3[1].IN1
+d3[2] => d3[2].IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+y[0] <= multiplexer:multiplexer_2_to_1_result.port3
+y[1] <= multiplexer:multiplexer_2_to_1_result.port3
+y[2] <= multiplexer:multiplexer_2_to_1_result.port3
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_3|multiplexer:multiplexer_2_to_1_1
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_3|multiplexer:multiplexer_2_to_1_2
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_3|multiplexer:multiplexer_2_to_1_result
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_4
+d0[0] => d0[0].IN1
+d0[1] => d0[1].IN1
+d0[2] => d0[2].IN1
+d1[0] => d1[0].IN1
+d1[1] => d1[1].IN1
+d1[2] => d1[2].IN1
+d2[0] => d2[0].IN1
+d2[1] => d2[1].IN1
+d2[2] => d2[2].IN1
+d3[0] => d3[0].IN1
+d3[1] => d3[1].IN1
+d3[2] => d3[2].IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+y[0] <= multiplexer:multiplexer_2_to_1_result.port3
+y[1] <= multiplexer:multiplexer_2_to_1_result.port3
+y[2] <= multiplexer:multiplexer_2_to_1_result.port3
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_4|multiplexer:multiplexer_2_to_1_1
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_4|multiplexer:multiplexer_2_to_1_2
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_4|multiplexer:multiplexer_2_to_1_result
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_result
+d0[0] => d0[0].IN1
+d0[1] => d0[1].IN1
+d0[2] => d0[2].IN1
+d1[0] => d1[0].IN1
+d1[1] => d1[1].IN1
+d1[2] => d1[2].IN1
+d2[0] => d2[0].IN1
+d2[1] => d2[1].IN1
+d2[2] => d2[2].IN1
+d3[0] => d3[0].IN1
+d3[1] => d3[1].IN1
+d3[2] => d3[2].IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+y[0] <= multiplexer:multiplexer_2_to_1_result.port3
+y[1] <= multiplexer:multiplexer_2_to_1_result.port3
+y[2] <= multiplexer:multiplexer_2_to_1_result.port3
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_result|multiplexer:multiplexer_2_to_1_1
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_result|multiplexer:multiplexer_2_to_1_2
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|multiplexer_16_to_1:op_selector|multiplexer_4_to_1:multiplexer_4_to_1_result|multiplexer:multiplexer_2_to_1_result
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_zero:zero_conditions
+result[0] => WideOr0.IN0
+result[1] => WideOr0.IN1
+result[2] => WideOr0.IN2
+zero <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_negative:negative_conditions
+result_n => result_n.IN1
+op => op.IN1
+negative <= and_gate:negative_condition.port2
+
+
+|param_alu|flag_negative:negative_conditions|and_gate:negative_condition
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_carry:carry_conditions
+cout => cout.IN1
+op[0] => ~NO_FANOUT~
+op[1] => op[1].IN1
+op[2] => ~NO_FANOUT~
+op[3] => op[3].IN1
+_carry <= and_gate:carry_condition_3.port2
+
+
+|param_alu|flag_carry:carry_conditions|not_gate:carry_condition_1
+a[0] => c[0].DATAIN
+c[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_carry:carry_conditions|and_gate:carry_condition_2
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_carry:carry_conditions|and_gate:carry_condition_3
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions
+a => a.IN2
+b => b.IN1
+result_n => result_n.IN1
+op[0] => op[0].IN1
+op[1] => op[1].IN1
+op[2] => ~NO_FANOUT~
+op[3] => op[3].IN1
+overflow <= and_gate:overflow_condition_8.port2
+
+
+|param_alu|flag_overflow:overflow_conditions|xor_gate:overflow_condition_1
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions|xor_gate:overflow_condition_2
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions|not_gate:overflow_condition_3
+a[0] => c[0].DATAIN
+c[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions|xor_gate:overflow_condition_4
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions|not_gate:overflow_condition_5
+a[0] => c[0].DATAIN
+c[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions|and_gate:overflow_condition_6
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions|and_gate:overflow_condition_7
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|flag_overflow:overflow_conditions|and_gate:overflow_condition_8
+a[0] => c.IN0
+b[0] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_alu|hex7seg:disp1
+display[0] <= deco_7:deco.port0
+display[1] <= deco_7:deco.port0
+display[2] <= deco_7:deco.port0
+display[3] <= deco_7:deco.port0
+display[4] <= deco_7:deco.port0
+display[5] <= deco_7:deco.port0
+display[6] <= deco_7:deco.port0
+inputHex[0] => inputHex[0].IN1
+inputHex[1] => inputHex[1].IN1
+inputHex[2] => inputHex[2].IN1
+inputHex[3] => inputHex[3].IN1
+enable => enable.IN1
+
+
+|param_alu|hex7seg:disp1|deco_7:deco
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= display.DB_MAX_OUTPUT_PORT_TYPE
+inputHex[0] => Decoder0.IN3
+inputHex[1] => Decoder0.IN2
+inputHex[2] => Decoder0.IN1
+inputHex[3] => Decoder0.IN0
+enable => display.OUTPUTSELECT
+enable => display.OUTPUTSELECT
+enable => display.OUTPUTSELECT
+enable => display.OUTPUTSELECT
+enable => display.OUTPUTSELECT
+enable => display.OUTPUTSELECT
+enable => display.OUTPUTSELECT
+
+

@@ -1,0 +1,18 @@
+module param_alu #(parameter N = 8) (input wire [n-1:0] a, b, 
+												 input wire [3:0] s, 
+												 input wire cin, 
+												 output wire [n-1:8] c);
+	wire [N-1:0] not_b;
+	wire [N-1:0] b_mux;
+	wire [N-1:0] sum;
+	wire cout;
+	not_gate #(N) not_b(b, not_b);
+	multiplexer #(N) b_multiplexer(b, not_b, s[0], b_mux);
+	fulladder #(N) adder(a, b_mux, cin, sum, cout);
+	
+	
+	if (s = '4b1001') begin
+		b = 
+		end
+
+endmodule
